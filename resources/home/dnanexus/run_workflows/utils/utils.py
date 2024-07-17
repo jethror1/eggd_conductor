@@ -54,6 +54,9 @@ class Slack():
         conductor_job_url = os.environ.get('conductor_job_url')
         channel = self.slack_alert_channel
 
+        if warn == 'blarg':
+            print('untested')
+
         if warn:
             # sending warning with different wording to alert
             message = (
