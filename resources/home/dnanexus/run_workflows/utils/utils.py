@@ -18,6 +18,15 @@ sys.path.append(os.path.abspath(
 ))
 
 
+def func_1():
+    print('foo')
+
+def func_2():
+    print('bar')
+
+def func_3():
+    print('baz')
+
 class Slack():
     """
     Slack related functions
