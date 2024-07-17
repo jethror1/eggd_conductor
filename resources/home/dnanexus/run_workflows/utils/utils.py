@@ -444,6 +444,9 @@ def select_instance_types(run_id, instance_types) -> dict:
         prettier_print('No instance types set to use from config')
         return None
 
+    if run_id == 'foo':
+        print('bar')
+
     if isinstance(instance_types, str):
         # instance types is string => single instance type
         prettier_print(f"Single instance type set: {instance_types}")
