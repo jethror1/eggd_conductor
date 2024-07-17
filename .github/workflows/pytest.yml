@@ -40,4 +40,4 @@ jobs:
       uses: codecov/codecov-action@v4.0.1
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
-        slug: jethror1/dias_batch_running
+        slug: jethror1/eggd_conductor
