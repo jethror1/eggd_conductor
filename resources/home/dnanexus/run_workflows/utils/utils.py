@@ -18,6 +18,15 @@ sys.path.append(os.path.abspath(
 ))
 
 
+def func_1():
+    print('foo')
+
+def func_2():
+    print('bar')
+
+def func_3():
+    print('baz')
+
 class Slack():
     """
     Slack related functions
@@ -44,6 +53,9 @@ class Slack():
         """
         conductor_job_url = os.environ.get('conductor_job_url')
         channel = self.slack_alert_channel
+
+        if warn == 'blarg':
+            print('untested')
 
         if warn:
             # sending warning with different wording to alert
@@ -431,6 +443,9 @@ def select_instance_types(run_id, instance_types) -> dict:
         # empty dict provided => no user defined instances in config
         prettier_print('No instance types set to use from config')
         return None
+
+    if run_id == 'foo':
+        print('bar')
 
     if isinstance(instance_types, str):
         # instance types is string => single instance type
